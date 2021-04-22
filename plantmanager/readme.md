@@ -10,7 +10,7 @@
 
 # LISTA DE DEPENDÊNCIAS:
 
-* Expo Vector:
+## Expo Vector:
 
 Para trabalhar com icons.
 
@@ -18,18 +18,18 @@ Para trabalhar com icons.
 
 [Referências](##Mais-informações-sobre-Expo:)
 
-* Font - Jost (Google Fonts via Expo)
+## Font - Jost (Google Fonts via Expo)
 
 > expo install expo-font @expo-google-fonts/jost
 
 [Referência/docs](https://docs.expo.io/guides/using-custom-fonts/)
   
-  * Expo App Loading
+### Expo App Loading
   > expo install expo-app-loading 
 
   [Documentação](https://docs.expo.io/versions/latest/sdk/app-loading/)
 
-* React Navigation
+## React Navigation
 > yarn add @react-navigation/native
 
 > expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
@@ -37,6 +37,31 @@ Para trabalhar com icons.
 > yarn add @react-navigation/stack
 
 [Referências](##Mais-Sobre-React-Navigation)
+
+## react-native-iphone-x-helper
+
+> npm i react-native-iphone-x-helper
+ou
+> yarn add react-native-iphone-x-helper
+
+[Mais em Doc](https://github.com/ptelad/react-native-iphone-x-helper)
+
+## Axios
+Biblioteca para lhe dar com requisições.
+
+> yarn add axios
+
+[Doc](https://github.com/axios/axios)
+
+## Typecode - Json-server
+Biblioteca para simular API fake. Rodar em super usuário.
+> #npm install -g json-server
+
+## Expo SVG
+Para trabalhar e exibir imagens no formato svg (vetorizadas)
+> expo install react-native-svg
+
+[doc](https://docs.expo.io/versions/latest/sdk/svg/)
 
 # Dia 01
   Foram realizados as pré configurações e estruturação do projeto.
@@ -93,7 +118,59 @@ Dica:
 
 # Dia 03
 
-Criação da interface de escolha uma planta
+Criação da interface de escolha uma plantas.
+
+## Header:
+- [Instação da lib react-native-iphone-x-helper](##-react-native-iphone-x-helper)
+
+Usar no css na propriedade marginTop para adicionar uma margem e ignorar o detalhe da tela do iphone-x.
+```marginTop:getStatusBarHeight(),```
+
+#### Dica - borderRadium:
+Para formatar uma imagem ou bordar circulares a dica é colocar pelo menos 50% o tamanho do elemento original.
+
+  Exemplo:
+
+  ```tsx
+  image: {
+    width:80,
+    height: 80,
+
+    borderRadius:40, //50% do tamanho original.
+  }
+ ``` 
+### Uso do react-native-gesture-handler 
+recButton.
+
+### Dica, acumular estilos.
+Transforma o style em uma lista
+ex.
+```JS
+  <Text style={[styles.stilo1,styles.estilo2]}>
+```
+### JSON
+### Load
+
+## Recap:
+{x} Construção da tela de listar as plantas
+{x} Animação no carregamento dos elementos
+{x} Buscou dados da api (criada)
+{x} Criação de filtros na API
+{x} Carregamento gradativo dos elementos da tela
+{x} Reaproveitamento de componente
+
+
+[Lottie](https://lottiefiles.com/)
+[Expo Lottie](https://docs.expo.io/versions/latest/sdk/lottie/)
+
+Utilizando organização de lista via Expo SVG
+
+
+
+
+
+
+
 
 # Referências:
 ## Mais informações sobre Expo:
