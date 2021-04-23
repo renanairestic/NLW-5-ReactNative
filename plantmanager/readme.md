@@ -53,6 +53,13 @@ Biblioteca para lhe dar com requisições.
 
 [Doc](https://github.com/axios/axios)
 
+## AsyncStorage
+  Persitência de dados
+
+  > expo install @react-native-async-storage/async-storage
+
+  [Doc Expo  AsyncStorage](https://docs.expo.io/versions/latest/sdk/async-storage/)
+
 ## Typecode - Json-server
 Biblioteca para simular API fake. Rodar em super usuário.
 > #npm install -g json-server
@@ -62,6 +69,17 @@ Para trabalhar e exibir imagens no formato svg (vetorizadas)
 > expo install react-native-svg
 
 [doc](https://docs.expo.io/versions/latest/sdk/svg/)
+
+## Expo-DataTimePicker
+[Doc Expo DateTimePicker](https://docs.expo.io/versions/latest/sdk/date-time-picker/)
+
+> expo install @react-native-community/datetimepicker
+
+## date-fns
+[Documentação date-fns](https://date-fns.org/docs/Getting-Started)
+
+> yarn add date-fns
+
 
 # Dia 01
   Foram realizados as pré configurações e estruturação do projeto.
@@ -171,6 +189,60 @@ Utilizando organização de lista via Expo SVG
 
 
 
+
+# Dia 04
+
+## Configurar a validação de acesso
+
+  Quando o usuário entra no app é solicitado um nome, liberar o progresso posterior o preenchimento do nome.
+
+  ```JS
+  if(!name)
+      return Alert.alert('Me diz como chamar você 😢️');
+  ```
+## AsyncStorage
+  [Instalação](##AsyncStorage)
+
+  ### SET:
+    ```js
+        AsyncStorage.setItem('@plantmanager:user',name);
+    ```
+    Utiliza sempre 2 parametros,
+    1- Recomenda usar o padrão inicio com "**@**" seguido do nome do app **plantmanager** "**:**" o que será salvado **user**;
+    
+    2 - O que vai ser armazenado (persistido). **name** 
+
+    Usar em uma função assincrona ( **async** )
+
+  ### GET:
+
+  ```js
+     async function loadStorageUserName(){
+      const user = await AsyncStorage.getItem('@plantmanager:user');
+      setUserName(user || 'Anônimo')
+    }
+    loadStorageUserName();
+  ```
+  Quando manipula dados com async ele trabalha com promece, ou seja, que pode ter um daley na busaca desses dados. Por esse motivo é usado em funções async com await.
+
+### correção da flatList
+  Por questões de usabilidade é recomendado identificar key para os itens da lista.
+
+### Boa Prática:
+  Converter as id e key em string nos flatList String(item.key) ou String(item.key).
+
+
+### Passar dados entre as telas
+Fou usado a dependência @react-navigation/core propriedade useRoute para buscar dados entre as telas.
+
+### Expo DataTimePicker
+
+- [Instalação](##Expo-DataTimePicker)
+
+### date-fns
+- [Instalação](##date-fns)
+
+Cunstomização de hora tanto para Android como para ios.
 
 # Referências:
 ## Mais informações sobre Expo:

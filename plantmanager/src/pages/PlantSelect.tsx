@@ -6,6 +6,7 @@ import {
   FlatList,
   ActivityIndicator,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 
 import {Header} from '../components/Header';
 import { EnvironmentButton } from '../components/EnvironmentButton';
@@ -47,9 +48,10 @@ export function PlantSelect(){
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [loadingMore, setLoadingMore] = useState(false);
-  const[loadAll,setLoadeAll] = useState(false);
 
-  function handleEnvironmentSelected(environment: string){
+  const navigation = useNavigation()
+
+function handleEnvironmentSelected(environment: string){
     setEnvironmentSelected(environment);
 
     if(environment === 'all')
@@ -61,7 +63,8 @@ export function PlantSelect(){
 
       setFilteredPlants(filtered)
   }
-  async function fetchPlants(){
+  
+async function fetchPlants(){
     const { data } = await api
     .get(`plants?_sort=name&_order=asc&_page=${page}&_limit=8`)
     
@@ -75,7 +78,6 @@ export function PlantSelect(){
       setPlants(data);
       setFilteredPlants(data);
     }
-
     setLoading(false);
     setLoadingMore(false);
   }
@@ -87,7 +89,12 @@ export function PlantSelect(){
     setPage(oldValue => oldValue + 1);
     fetchPlants();
   }
+
+  function handlePlantSelect(plant: PlantProps){
+    navigation.navigate("PlantSave",{ plant });
+  }
   
+  //Locais
   useEffect(() => {
     async function fetchEnvironment(){
       const { data } = await api
@@ -126,6 +133,7 @@ if(loading)
     <View>
       <FlatList
       data={environments}
+      keyExtractor={(item) => String(item.key)}
       renderItem={({item})=>(
         <EnvironmentButton
             title={item.title}
@@ -145,9 +153,11 @@ if(loading)
     <View style={styles.plants}>
       <FlatList
         data={filteredPlants} 
+        keyExtractor={(item) => String(item.id)}
         renderItem={({item}) => (
           <PlantCardPrimary 
               data={item}
+             onPress={() => handlePlantSelect(item)} 
           />
         )}  
         showsVerticalScrollIndicator={false}   
@@ -198,6 +208,7 @@ environmentList:{
   paddingBottom:5,
   marginLeft:30,
   marginVertical:32,
+  paddingRight: 32,
 },
 plants:{
   flex:1,
