@@ -244,6 +244,12 @@ Fou usado a dependência @react-navigation/core propriedade useRoute para buscar
 
 Cunstomização de hora tanto para Android como para ios.
 
+### Refatoração de interface
+  Quando uma interface está sendo usado várias vezes é recomendado criar um componente exclusivo. [storage]('./src/libs/storage.ts')
+  Foi usado nos arquivos [PlantSave]('./src/pages/PlantSave.tsx) e [PlantSelect]('./src/pages/PlantSelect.tsx')
+
+  
+
 # Referências:
 ## Mais informações sobre Expo:
 - [GitHub - Expo/vector-icons](https://github.com/expo/vector-icons)
