@@ -30,15 +30,15 @@ interface EvinromentProps{
 
 // json-server ./src/services/server.json --host 192.168.1.64 --port 3333 --delay 700
 export function PlantSelect(){
-  const [environments, setEnvironments] = useState<EvinromentProps[]>([])
-  const [plants, setPlants] = useState<PlantProps[]>([])
-  const [filteredPlants, setFilteredPlants] = useState<PlantProps[]>([])
-  const [environmentSelected, setEnvironmentSelected]= useState('all')
+  const [environments, setEnvironments] = useState<EvinromentProps[]>([]);
+  const [plants, setPlants] = useState<PlantProps[]>([]);
+  const [filteredPlants, setFilteredPlants] = useState<PlantProps[]>([]);
+  const [environmentSelected, setEnvironmentSelected]= useState('all');
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [loadingMore, setLoadingMore] = useState(false);
 
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
 function handleEnvironmentSelected(environment: string){
     setEnvironmentSelected(environment);

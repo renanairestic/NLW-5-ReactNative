@@ -47,8 +47,9 @@ export function UserIdentification(){
 
       try {
         
-        await AsyncStorage.setItem('@plantmanager:user',name)
+        await AsyncStorage.setItem('@plantmanager:user', name)
         navigation.navigate('Confirmation');
+        
       } catch {
         Alert.alert('Não foi possível salvar o nome seu nome 😢️')
       }

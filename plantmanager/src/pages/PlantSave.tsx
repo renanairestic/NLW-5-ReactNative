@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; 
+import React, {  useState } from 'react'; 
 import { View,
           Alert,
           StyleSheet,
@@ -9,8 +9,8 @@ import { View,
           Platform,
 
        } from 'react-native';
+import { SvgFromUri } from 'react-native-svg';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
-import { SvgCssUri } from 'react-native-svg';
 import { useRoute } from '@react-navigation/core'; 
 import DateTimePicker, { Event } from '@react-native-community/datetimepicker';
 import { format, isBefore } from 'date-fns';
@@ -51,8 +51,9 @@ function handleOpenDatetimePickerForAndroid(){
 
 
 async function handleSave(){
-  
-  try {
+  const data = await loadPlant()
+  console.log(data)
+  /* try {
     await savePlant({
       ...plant,
       dateTimeNotification: selectedDateTime
@@ -62,13 +63,13 @@ async function handleSave(){
   } catch {
     Alert.alert('Não foi possível salvar 😢️');
   }
-  
+   */
 }
 
   return(
     <View style={styles.container}>
       <View style={styles.plantInfo}>
-          <SvgCssUri
+          <SvgFromUri
             uri={plant.photo}
             height={150}
             width={150}
@@ -98,10 +99,10 @@ async function handleSave(){
         
         {showDatePicker && (
               <DateTimePicker
-              value={selectedDateTime}
-              mode="time"
-              display="spinner"
-              onChange={handleChangeTime} 
+                  value={selectedDateTime}
+                  mode="time"
+                  display="spinner"
+                  onChange={handleChangeTime} 
             />)
         }
         {
