@@ -81,6 +81,11 @@ Para trabalhar e exibir imagens no formato svg (vetorizadas)
 > yarn add date-fns
 
 
+## react navigation tabs
+[Documentação tab-navigation](https://reactnavigation.org/docs/tab-based-navigation)
+
+> yarn add @react-navigation/bottom-tabs
+
 # Dia 01
   Foram realizados as pré configurações e estruturação do projeto.
 
@@ -249,6 +254,12 @@ Cunstomização de hora tanto para Android como para ios.
   Foi usado nos arquivos [PlantSave]('./src/pages/PlantSave.tsx) e [PlantSelect]('./src/pages/PlantSelect.tsx')
 
   
+
+### Tab-bar
+- [Instalação](##react-navigation-tabs)
+
+Criado navegação tab-bar para nova plantas e minhas plantas.
+
 
 # Referências:
 ## Mais informações sobre Expo:
