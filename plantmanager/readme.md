@@ -1,11 +1,17 @@
 # Projeto NLW5 Rocketseat - 2021
-> Sobre o projeto
+## Sobre o projeto
+  
+  App desenvolvido durante a NLW5.
+  Consiste em um app de cadastro  e lembrete de regar as plantas. 
+  Aconteceu durante os dias 19 até 23 de abril de 2021, cada dia sendo liberado uma parte da prática. 
 
-# SUMÁRIO
+# DIÁRIO DE BORDO:
 - [Dia 01](#Dia-01)
 - [Dia 02](#Dia-02)
 - [Dia 03](#Dia-03)
-
+- [Dia 04](#Dia-04)
+- [Dia 05](#Dia-05)
+- [Lista de Dependências Instaladas](#LISTA-DE-DEPENDÊNCIAS:)
 - [Referências](#Referências)
 
 # LISTA DE DEPENDÊNCIAS:
@@ -85,6 +91,9 @@ Para trabalhar e exibir imagens no formato svg (vetorizadas)
 [Documentação tab-navigation](https://reactnavigation.org/docs/tab-based-navigation)
 
 > yarn add @react-navigation/bottom-tabs
+
+## Expo local Notification
+[Documentação Expo Local Notifications](https://docs.expo.io/versions/latest/sdk/notifications/)
 
 # Dia 01
   Foram realizados as pré configurações e estruturação do projeto.
@@ -259,6 +268,12 @@ Cunstomização de hora tanto para Android como para ios.
 - [Instalação](##react-navigation-tabs)
 
 Criado navegação tab-bar para nova plantas e minhas plantas.
+
+# Dia 5
+## Expo Local Notification
+- [Instalação](##Expo-local-Notification)
+
+Foi realizado a explicação conceitural sobre a lib.
 
 
 # Referências:

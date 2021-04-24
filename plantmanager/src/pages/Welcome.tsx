@@ -76,7 +76,6 @@ const navigation = useNavigation();
     },
   title:{
     fontSize:28,
-    fontWeight:'bold',
     textAlign:'center',
     fontFamily:fonts.heading,
     color:colors.heading,
