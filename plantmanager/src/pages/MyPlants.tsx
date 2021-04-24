@@ -7,7 +7,7 @@ import {
         FlatList,
         Alert,       
        } from 'react-native';
-import { Header } from '../components/Header';
+
 import colors from '../styles/colors';
 
 import waterDrop from '../assets/waterdrop.png';
