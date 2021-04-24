@@ -23,7 +23,7 @@ interface PlantProps extends RectButtonProps {
 export const PlantCardSecondary =({data,handleRemove, ...rest} : PlantProps) => {
   return(
     <Swipeable 
-      overshootRight={false}
+     // overshootRight={false}
       renderRightActions={()=> (
         <Animated.View>
           <View>

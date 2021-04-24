@@ -11,6 +11,8 @@ import { Header } from '../components/Header';
 import colors from '../styles/colors';
 
 import waterDrop from '../assets/waterdrop.png';
+import { getStatusBarHeight} from 'react-native-iphone-x-helper';
+import userImg from '../assets/renan.png';
 
 import { loadPlant, PlantProps, removePlant } from '../libs/storage';
 import { formatDistance, getTime } from 'date-fns';
@@ -23,6 +25,8 @@ export function MyPlants(){
   const [myPlants, setMyPlants] = useState<PlantProps[]>([]);
   const [loading, setLoading] = useState(true);
   const [nextWaterd, setNextWaterd] = useState<string>();
+
+  
 
   function handleRemove(plant: PlantProps){
     Alert.alert('Remover', `Deseja reomover a ${plant.name}?`,[
@@ -63,12 +67,21 @@ export function MyPlants(){
     }
     loadStorageData()
   },[])
+
   if(loading)
   return <Load />
 
   return(
     <View style={styles.container}>
-      <Header />
+
+     <View style={styles.containerTitle}>
+       <View>
+        <Text style={styles.title}>Minhas</Text>
+        <Text style={styles.subtitle}>Plantinhas</Text>
+       </View>
+       <Image source={userImg} style={styles.image}/>
+     </View>
+
       <View style={styles.spotlight}>
         <Image 
           style={styles.spotlightImage}
@@ -109,6 +122,29 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     paddingTop: 50,
     backgroundColor: colors.background,
+  },
+  containerTitle:{
+    width:'100%',
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'flex-start',
+    marginTop:getStatusBarHeight(),
+  },
+  title:{
+    fontSize:32,
+    color:colors.heading,
+    fontFamily:fonts.text,
+  },
+  subtitle:{
+    fontSize:32,
+    fontFamily:fonts.heading,
+    color:colors.heading,
+    lineHeight:40,
+  },
+  image:{
+    width:70,
+    height:70,
+    borderRadius:40,
   },
   spotlight: {
     backgroundColor: colors.blue_light,
