@@ -14,9 +14,9 @@
 - TypeScript
 
 
-<center>  DIÁRIO DE BORDO - SUMÁRIO: </center>
+# DIÁRIO DE BORDO - SUMÁRIO
 
- [Dia 01](#Dia-01) | [Dia 02](#Dia-02) | [Dia 03](#Dia-03) | [Dia 04](#Dia-04) | [Dia 05](#Dia-05)
+ ## [Dia 01](#Dia-01) | [Dia 02](#Dia-02) | [Dia 03](#Dia-03) | [Dia 04](#Dia-04) | [Dia 05](#Dia-05)
 
 - [Passo a passo para rodar o app](#Rodar-o-App)
 - [Lista de Dependências Instaladas](#LISTA-DE-DEPENDÊNCIAS:)
@@ -38,21 +38,24 @@
 
   3 - Procure o arquivo ['./src/services/api.ts]:
     Altere a linha 3:
-  ```js
+  
+```js
     const api = axios.create({  baseURL:'http://###.###.#.##:3333'}); 
-   ```
+```
     Altere os ###.###.#.## pelo seu IP  
     exemplo se seu IP for **192.168.1.64**
     deve ficar assim:
-  ```js
+  
+```js
     const api = axios.create({  baseURL:'http://192.168.1.64:3333'}); 
-   ```
+```
 
   Caso não saiba seu IP, verifique o IP no navegador em que o expo abriu.
 
   4 - Para iniciar a API prória rode o comando no terminal:
   
   > json-server ./src/services/server.json --host ###.###.#.## --port 3333 --delay 700 
+
   No lugar dos "###.###.#.##" insira o IP do seu PC. 
 
   5 - Se tudo deu certo o App deve está abrindo e funcionando.
@@ -340,10 +343,12 @@ Foi realizado a explicação conceitural sobre a lib.
   {x} Correção e inclusão do título sugerido no produto na página MyPlants "Minhas plantinhas";
 
 ## goback - react Navigation:
-  ```js
+
+```js
   () => navigation.goBack()
-  ```
-  ``Sugestão @pfluck - Comunidade Rockseat - React Native (Discord)``
+```
+
+``Sugestão @pfluck - Comunidade Rockseat - React Native (Discord)``
 
 ## Título e subtitulo MyPlants
 
@@ -363,7 +368,7 @@ Foi realizado a explicação conceitural sobre a lib.
 - [Imagem do perfil](https://www.flaticon.com/br/)
 
 ## Projeto Oficial 
-- [github](birobirobiro/nlw-05-plantmanager)
+- [github](https://github.com/birobirobiro/nlw-05-plantmanager)
 
 ## Mais informações sobre Expo:
 - [GitHub - Expo/vector-icons](https://github.com/expo/vector-icons)
