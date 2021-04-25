@@ -206,6 +206,7 @@ Criação da interface de escolha uma plantas.
 - [Instação da lib react-native-iphone-x-helper](##-react-native-iphone-x-helper)
 
 Usar no css na propriedade marginTop para adicionar uma margem e ignorar o detalhe da tela do iphone-x.
+
 ```marginTop:getStatusBarHeight(),```
 
 #### Dica - borderRadium:
@@ -213,14 +214,14 @@ Para formatar uma imagem ou bordar circulares a dica é colocar pelo menos 50% o
 
   Exemplo:
 
-  ```tsx
+```tsx
   image: {
     width:80,
     height: 80,
 
     borderRadius:40, //50% do tamanho original.
   }
- ``` 
+``` 
 ### Uso do react-native-gesture-handler 
 recButton.
 
@@ -235,10 +236,15 @@ ex.
 
 ## Recap:
 {x} Construção da tela de listar as plantas
+
 {x} Animação no carregamento dos elementos
+
 {x} Buscou dados da api (criada)
+
 {x} Criação de filtros na API
+
 {x} Carregamento gradativo dos elementos da tela
+
 {x} Reaproveitamento de componente
 
 
@@ -268,26 +274,26 @@ Utilizando organização de lista via Expo SVG
   [Instalação](##AsyncStorage)
 
   ### SET:
-    ```js
+```js
         AsyncStorage.setItem('@plantmanager:user',name);
-    ```
-    Utiliza sempre 2 parametros,
-    1- Recomenda usar o padrão inicio com "**@**" seguido do nome do app **plantmanager** "**:**" o que será salvado **user**;
-    
-    2 - O que vai ser armazenado (persistido). **name** 
+```
+Utiliza sempre 2 parametros,
+1 - Recomenda usar o padrão inicio com "**@**" seguido do nome do app **plantmanager** "**:**" o que será salvado **user**;
+ 
+2 - O que vai ser armazenado (persistido). **name** 
 
-    Usar em uma função assincrona ( **async** )
+Usar em uma função assincrona ( **async** )
 
-  ### GET:
+ ### GET:
 
-  ```js
+```js
      async function loadStorageUserName(){
       const user = await AsyncStorage.getItem('@plantmanager:user');
       setUserName(user || 'Anônimo')
     }
     loadStorageUserName();
-  ```
-  Quando manipula dados com async ele trabalha com promece, ou seja, que pode ter um daley na busaca desses dados. Por esse motivo é usado em funções async com await.
+```
+Quando manipula dados com async ele trabalha com promece, ou seja, que pode ter um daley na busaca desses dados. Por esse motivo é usado em funções async com await.
 
 ### correção da flatList
   Por questões de usabilidade é recomendado identificar key para os itens da lista.
