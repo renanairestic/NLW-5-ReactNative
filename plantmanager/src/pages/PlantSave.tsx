@@ -11,11 +11,11 @@ import { View,
        } from 'react-native';
 import { SvgFromUri } from 'react-native-svg';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
-import { useNavigation, useRoute } from '@react-navigation/core'; 
+import { useNavigation, useRoute, } from '@react-navigation/core'; 
 import DateTimePicker, { Event } from '@react-native-community/datetimepicker';
 import { format, isBefore } from 'date-fns';
 import { PlantProps, savePlant } from '../libs/storage';
-
+import { Ionicons } from '@expo/vector-icons';
 import waterDrop from '../assets/waterdrop.png';
 import { Button } from '../components/Button';
 import colors from '../styles/colors';
@@ -30,7 +30,7 @@ export function PlantSave(){
   const [showDatePicker, setShowDatePicker] = useState(Platform.OS == 'ios')
   const route = useRoute();
   const { plant } = route.params as Params;
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
 function handleChangeTime(event: Event, dateTime:Date | undefined){
   if(Platform.OS === 'android'){
@@ -78,6 +78,12 @@ async function handleSave(){
     >
       <View style={styles.container}>
         <View style={styles.plantInfo}>
+      <View style={styles.containerBack}>
+      <TouchableOpacity 
+        onPress={() => navigation.goBack()}>
+        <Ionicons name="chevron-back-outline" size={24} color="black" />
+      </TouchableOpacity>
+      </View>
             <SvgFromUri
               uri={plant.photo}
               height={150}
@@ -128,7 +134,7 @@ async function handleSave(){
           }
 
           <Button 
-              title={'cadastrar Planta'}
+              title={'Cadastrar Planta'}
               onPress={handleSave}
           />
           
@@ -143,6 +149,9 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'space-between',
     backgroundColor: colors.shape,
+  },
+  containerBack:{
+    alignSelf:'flex-start',
   },
   plantInfo:{
     flex:1,

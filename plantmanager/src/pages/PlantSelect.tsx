@@ -19,16 +19,12 @@ import fonts from '../styles/fonts';
 
 import api from '../services/api';
 
-
 interface EvinromentProps{
   key:string;
   title:string;
 }
 
 
-
-
-// json-server ./src/services/server.json --host 192.168.1.64 --port 3333 --delay 700
 export function PlantSelect(){
   const [environments, setEnvironments] = useState<EvinromentProps[]>([]);
   const [plants, setPlants] = useState<PlantProps[]>([]);
@@ -111,7 +107,6 @@ if(loading)
     <View style={styles.container}>
     <View style={styles.header}>
       <Header/>
-
       <Text style={styles.title}>
         Em qual ambiente
         </Text>
@@ -177,6 +172,7 @@ container:{
 },
 header:{
   paddingHorizontal:30,
+  marginTop:20,
 },
 title:{
   fontSize:17,

@@ -4,15 +4,58 @@
   App desenvolvido durante a NLW5.
   Consiste em um app de cadastro  e lembrete de regar as plantas. 
   Aconteceu durante os dias 19 até 23 de abril de 2021, cada dia sendo liberado uma parte da prática. 
+  
+## Tecnologias
 
-# DIÁRIO DE BORDO:
-- [Dia 01](#Dia-01)
-- [Dia 02](#Dia-02)
-- [Dia 03](#Dia-03)
-- [Dia 04](#Dia-04)
-- [Dia 05](#Dia-05)
+- Expo
+- React Native
+  - React Navigation
+  - React AsyncStorage
+- TypeScript
+
+
+<center>  DIÁRIO DE BORDO - SUMÁRIO: </center>
+
+ [Dia 01](#Dia-01) | [Dia 02](#Dia-02) | [Dia 03](#Dia-03) | [Dia 04](#Dia-04) | [Dia 05](#Dia-05)
+
+- [Passo a passo para rodar o app](#Rodar-o-App)
 - [Lista de Dependências Instaladas](#LISTA-DE-DEPENDÊNCIAS:)
+- [Adicional ao Projeto](#Adicional-ao-Projeto:)
 - [Referências](#Referências)
+
+
+# Passo a Passo
+
+  Aqui vou listar um passo a passo para você rodar o app no seu PC.
+  Após baixar os arquivos do GITHUB:
+
+  1 - Abra no VS Code
+    a. Talvez precise instalar algumas dependências, segue o guia [Dependências](#LISTA-DE-DEPENDÊNCIAS)
+  
+  2 - Digite o comando em seu terminal para iniciar o App
+  > expo start
+  Esse projeto foi construido com auxilio do expo, portanto esse será o comando para iniciar.
+
+  3 - Procure o arquivo ['./src/services/api.ts]:
+    Altere a linha 3:
+  ```js
+    const api = axios.create({  baseURL:'http://###.###.#.##:3333'}); 
+   ```
+    Altere os ###.###.#.## pelo seu IP  
+    exemplo se seu IP for **192.168.1.64**
+    deve ficar assim:
+  ```js
+    const api = axios.create({  baseURL:'http://192.168.1.64:3333'}); 
+   ```
+
+  Caso não saiba seu IP, verifique o IP no navegador em que o expo abriu.
+
+  4 - Para iniciar a API prória rode o comando no terminal:
+  
+  > json-server ./src/services/server.json --host ###.###.#.## --port 3333 --delay 700 
+  No lugar dos "###.###.#.##" insira o IP do seu PC. 
+
+  5 - Se tudo deu certo o App deve está abrindo e funcionando.
 
 # LISTA DE DEPENDÊNCIAS:
 
@@ -94,6 +137,10 @@ Para trabalhar e exibir imagens no formato svg (vetorizadas)
 
 ## Expo local Notification
 [Documentação Expo Local Notifications](https://docs.expo.io/versions/latest/sdk/notifications/)
+
+
+
+Aqui estão minha anotações contando o que achei de relevante durante as explicações das aulas no NLW.
 
 # Dia 01
   Foram realizados as pré configurações e estruturação do projeto.
@@ -275,8 +322,49 @@ Criado navegação tab-bar para nova plantas e minhas plantas.
 
 Foi realizado a explicação conceitural sobre a lib.
 
+# Dicas:
+## Remover todos dados salvo do Async
+
+ Excluir todos dados do banco (plantas salvas)
+
+```js    
+
+ async function clearAllData() {
+     await AsyncStorage.getAllKeys()
+          .then(keys => AsyncStorage.multiRemove(keys))
+          .then(() => alert('success')); }
+  ```
+
+# Adicional ao Projeto:
+  {x} Implementar botão de voltar no **PlantSave** (conforme o projeto Figma propõe);
+  {x} Correção e inclusão do título sugerido no produto na página MyPlants "Minhas plantinhas";
+
+## goback - react Navigation:
+  ```js
+  () => navigation.goBack()
+  ```
+  ``Sugestão @pfluck - Comunidade Rockseat - React Native (Discord)``
+
+## Título e subtitulo MyPlants
+
+```js
+ <View style={styles.containerTitle}>
+       <View>
+        <Text style={styles.title}>Minhas</Text>
+        <Text style={styles.subtitle}>Plantinhas</Text>
+       </View>
+      <Image source={userImg} style={styles.image}/>
+     </View>
+```
+
 
 # Referências:
+## assets
+- [Imagem do perfil](https://www.flaticon.com/br/)
+
+## Projeto Oficial 
+- [github](birobirobiro/nlw-05-plantmanager)
+
 ## Mais informações sobre Expo:
 - [GitHub - Expo/vector-icons](https://github.com/expo/vector-icons)
 - [Documentação Expo](https://docs.expo.io/)

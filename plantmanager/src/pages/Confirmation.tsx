@@ -6,8 +6,6 @@ import {
   View,
 } from 'react-native';
 
-
-
 import { useNavigation, useRoute } from '@react-navigation/core';
 
 import { Button } from '../components/Button';
