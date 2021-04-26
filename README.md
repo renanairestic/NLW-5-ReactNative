@@ -11,6 +11,7 @@ O evento aconteceu online no formato de aulas assíncronas disponibilizadas uma 
 - Dia 04 - 22/04/2021
 - Dia 05 - 23/04/2021
 
-## [Meu Projeto]('./plantmanager')
+# [Meu Projeto - Acesse aqui]('./plantmanager')
 
+# Links Externos:
 - [Rocketseat](https://rocketseat.com.br/)
