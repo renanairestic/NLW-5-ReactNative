@@ -13,4 +13,4 @@ O evento aconteceu online no formato de aulas assíncronas disponibilizadas uma 
 
 ## [Meu Projeto]('./plantmanager')
 
-- [Rocketseat}(https://rocketseat.com.br/)
+- [Rocketseat](https://rocketseat.com.br/)
