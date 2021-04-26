@@ -19,7 +19,7 @@
  ## [Dia 01](#Dia-01) | [Dia 02](#Dia-02) | [Dia 03](#Dia-03) | [Dia 04](#Dia-04) | [Dia 05](#Dia-05)
 
 - [Passo a passo para rodar o app](#Rodar-o-App)
-- [Lista de Dependências Instaladas](#LISTA-DE-DEPENDÊNCIAS:)
+- [Lista de Dependências Instaladas](#LISTA-DE-DEPENDENCIAS)
 - [Adicional ao Projeto](#Adicional-ao-Projeto:)
 - [Referências](#Referências)
 
