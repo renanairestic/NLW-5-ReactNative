@@ -7,20 +7,29 @@
   
 ## Tecnologias
 
-- Expo
-- React Native
-  - React Navigation
-  - React AsyncStorage
-- TypeScript
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.io/)
+- [TypeScript](https://www.typescriptlang.org/)
 
+## 🔖 Layout
+
+Acesse o link abaixo para visualizar o projeto proposto para o NLW Trilha React.
+
+- [Layout](https://www.figma.com/file/IhQRtrOZdu3TrvkPYREzOy/PlantManager) 
+
+Necessário ter uma conta no [Figma](http://figma.com/) para ter acesso.
+
+<p align="center">
+ <img  src='https://img.shields.io/github/license/renanairestic/NLW-5-ReactNative'alt='license'>
+</p>
 
 # SUMÁRIO
 
  ## [Dia 01](#Dia-01) | [Dia 02](#Dia-02) | [Dia 03](#Dia-03) | [Dia 04](#Dia-04) | [Dia 05](#Dia-05)
 
-- [Passo a passo para rodar o app](#Rodar-o-App)
+- [Passo a passo para rodar o app](#Passo-a-Passo)
 - [Adicional ao Projeto](#Adicional-ao-Projeto)
-- [Lista de Dependências Instaladas](#LISTA-DE-DEPENDENCIAS)
+- [Lista de Dependências Instaladas](#LISTA-DE-DEPENDÊNCIAS)
 - [Referências](#Referências)
 
 
@@ -70,21 +79,21 @@
 
   Explicado sobre hooks - useState 
   
-  [Instalação Expo Vector](##Expo-Vector)
+  [Instalação Expo Vector](#-Expo-Vector)
   
 
 # Dia 02
 
 Neste dia foi realizado:
-{X} Instalação de dependências
-{X} Utilização de icons (expo)
-{X} Utilização/ instalação de font externa (expo)
-{X} Instalção font
-{X} Navigation Stack
+[X] Instalação de dependências
+[X] Utilização de icons (expo)
+[X] Utilização/ instalação de font externa (expo)
+[X] Instalção font
+[X] Navigation Stack
 
 ```Dica: Para garantir que todas as fonts sejam carregadas é recomendado usar o metodo de Expo Load (relatório de pendendências).
 ```
-[Instalação Font Google](##Font-Jost-(Google-Fonts-via-Expo)
+[Instalação Font Google](#-Font-Jost-(Google-Fonts-via-Expo)
 
  Hack para SafeAreaView funcionar em Android:
  
@@ -119,7 +128,7 @@ Usado no caso de não passar parâmentro de definição de tipo.
 
 Nessa etapa foi instalado a dependência Expo App Loading
 
--[Instalação App Loading](##Expo-App-Loading)
+-[Instalação App Loading](#-Expo-App-Loading)
 
 ### Usar Navigation
 
@@ -129,7 +138,7 @@ Dica:
     onPress={Keyboard.dimiss}> em volta da tela
   ```
 
-- [Instalação Navigation](##React-Navigation)
+- [Instalação Navigation](#-React-Navigation)
 
 
 # Dia 03
@@ -137,13 +146,13 @@ Dica:
 Criação da interface de escolha uma plantas.
 
 ## Header:
-- [Instação da lib react-native-iphone-x-helper](##react-native-iphone-x-helper)
+- [Instação da lib react-native-iphone-x-helper](#-react-native-iphone-x-helper)
 
 Usar no css na propriedade marginTop para adicionar uma margem e ignorar o detalhe da tela do iphone-x.
 
 ```marginTop:getStatusBarHeight(),```
 
-#### Dica - borderRadium:
+#### Dica - borderRad
 Para formatar uma imagem ou bordar circulares a dica é colocar pelo menos 50% o tamanho do elemento original.
 
   Exemplo:
@@ -168,30 +177,30 @@ ex.
 ```
 ### Dependências
 
-- [Axios](##Axios)
+- [Axios](#-Axios)
 
 #### API
-- [Typecode - Json-server](##Typecode-Json-server)
+- [Typecode - Json-server](#-Typecode-Json-server)
 
 ## Recap:
-{x} Construção da tela de listar as plantas
+[x] Construção da tela de listar as plantas
 
-{x} Animação no carregamento dos elementos
+[x] Animação no carregamento dos elementos
 
-{x} Buscou dados da api (criada)
+[x] Buscou dados da api (criada)
 
-{x} Criação de filtros na API
+[x] Criação de filtros na API
 
-{x} Carregamento gradativo dos elementos da tela
+[x] Carregamento gradativo dos elementos da tela
 
-{x} Reaproveitamento de componente
+[x] Reaproveitamento de componente
 
 
-[Lottie](https://lottiefiles.com/)
-[Expo Lottie](https://docs.expo.io/versions/latest/sdk/lottie/)
+[Lottie- link externo](https://lottiefiles.com/)
+[Expo Lottie - link externo](https://docs.expo.io/versions/latest/sdk/lottie/)
 
 Utilizando organização de lista via Expo SVG
-- [Instalação Expo SVG](##Expo-SVG)
+- [Instalação Expo SVG](#-Expo-SVG)
 
 # Dia 04
 
@@ -205,7 +214,7 @@ Utilizando organização de lista via Expo SVG
   ```
 
 ## AsyncStorage
-  [Instalação](##AsyncStorage)
+  [Instalação](#-syncStorage)
 
   ### SET:
 ```js
@@ -216,7 +225,7 @@ Utiliza sempre 2 parametros,
  
 2 - O que vai ser armazenado (persistido). **name** 
 
-Usar em uma função assincrona ( **async** )
+Usar em uma função assiLISTA DE DEPENDÊNCIASncrona ( **async** )
 
  ### GET:
 
@@ -241,10 +250,10 @@ Fou usado a dependência @react-navigation/core propriedade useRoute para buscar
 
 ### Expo DataTimePicker
 
-- [Instalação](##Expo-DataTimePicker)
+- [Instalação](#-xpo-DataTimePicker)
 
 ### date-fns
-- [Instalação](##date-fns)
+- [Instalação](#-ate-fns)
 
 Cunstomização de hora tanto para Android como para ios.
 
@@ -254,13 +263,13 @@ Cunstomização de hora tanto para Android como para ios.
 
   
 ### Tab-bar
-- [Instalação](##react-navigation-tabs)
+- [Instalação tab-bar](#-react-navigation-tabs)
 
 Criado navegação tab-bar para nova plantas e minhas plantas.
 
 # Dia 5
 ## Expo Local Notification
-- [Instalação](##Expo-local-Notification)
+- [Instalação Expo Local Notification](#-Expo-local-Notification)
 
 Foi realizado a explicação conceitural sobre a lib.
 
@@ -278,8 +287,8 @@ Foi realizado a explicação conceitural sobre a lib.
   ```
 
 # Adicional ao Projeto:
-  {x} Implementar botão de voltar no **PlantSave** (conforme o projeto Figma propõe);
-  {x} Correção e inclusão do título sugerido no produto na página MyPlants "Minhas plantinhas";
+  [x] Implementar botão de voltar no **PlantSave** (conforme o projeto Figma propõe);
+  [x] Correção e inclusão do título sugerido no produto na página MyPlants "Minhas plantinhas";
 
 ## goback - react Navigation:
 
@@ -310,21 +319,21 @@ Comando do terminal:
 
 > expo install @expo/vector-icons
 
-[Referências](##Mais-informações-sobre-Expo)
+[Referências](#-Mais-informações-sobre-Expo)
 
 ## Font - Jost (Google Fonts via Expo)
 Comando do terminal:
 
 > expo install expo-font @expo-google-fonts/jost
 
-[Referência/docs](https://docs.expo.io/guides/using-custom-fonts/)
+[Referência/docs - Link externo](https://docs.expo.io/guides/using-custom-fonts/)
   
 ### Expo App Loading
 Comando do terminal:
 
   > expo install expo-app-loading 
 
-  [Documentação](https://docs.expo.io/versions/latest/sdk/app-loading/)
+  [Documentação - Link externo](https://docs.expo.io/versions/latest/sdk/app-loading/)
 
 ## React Navigation
 Comandos do terminal:
@@ -335,7 +344,7 @@ Comandos do terminal:
 
 > yarn add @react-navigation/stack
 
-[Referências](##Mais-Sobre-React-Navigation)
+[Referências](#-Mais-Sobre-React-Navigation)
 
 ## react-native-iphone-x-helper
 Comando do terminal:
@@ -344,7 +353,7 @@ Comando do terminal:
 ou
 > yarn add react-native-iphone-x-helper
 
-[Mais em Doc](https://github.com/ptelad/react-native-iphone-x-helper)
+[Mais em Doc - Link Externo](https://github.com/ptelad/react-native-iphone-x-helper)
 
 ## Axios
 Biblioteca para trabalhar com requisições.
@@ -352,7 +361,7 @@ Comando do terminal:
 
 > yarn add axios
 
-[Doc](https://github.com/axios/axios)
+[Doc Axios - link externo](https://github.com/axios/axios)
 
 ## AsyncStorage
   Persitência de dados
@@ -360,7 +369,7 @@ Comando do terminal:
 
   > expo install @react-native-async-storage/async-storage
 
-  [Doc Expo  AsyncStorage](https://docs.expo.io/versions/latest/sdk/async-storage/)
+  [Doc Expo  AsyncStorage - link externo](https://docs.expo.io/versions/latest/sdk/async-storage/)
 
 ## Typecode - Json-server
 Biblioteca para simular API fake. Rodar em super usuário.
@@ -376,7 +385,7 @@ Para trabalhar e exibir imagens no formato svg (vetorizadas)
 Comando do terminal:
 > expo install react-native-svg
 
-[doc](https://docs.expo.io/versions/latest/sdk/svg/)
+[Doc  - link externo](https://docs.expo.io/versions/latest/sdk/svg/)
 
 ## Expo-DataTimePicker
 
@@ -384,7 +393,7 @@ Comando do terminal:
 
 > expo install @react-native-community/datetimepicker
 
-[Doc Expo DateTimePicker](https://docs.expo.io/versions/latest/sdk/date-time-picker/)
+[Doc Expo DateTimePicker  - link externo](https://docs.expo.io/versions/latest/sdk/date-time-picker/)
 
 ## date-fns
 
@@ -392,7 +401,7 @@ Comando do terminal:
 
 > yarn add date-fns
 
-[Documentação date-fns](https://date-fns.org/docs/Getting-Started)
+[Documentação date-fns  - link externo](https://date-fns.org/docs/Getting-Started)
 
 ## react navigation tabs
 
@@ -400,7 +409,7 @@ Comando do terminal:
 
 > yarn add @react-navigation/bottom-tabs
 
-[Documentação tab-navigation](https://reactnavigation.org/docs/tab-based-navigation)
+[Documentação tab-navigation  - link externo](https://reactnavigation.org/docs/tab-based-navigation)
 
 ## Expo local Notification
 
@@ -408,23 +417,27 @@ Comando do terminal:
 
 > expo install expo-notifications
 
-[Documentação Expo Local Notifications](https://docs.expo.io/versions/latest/sdk/notifications/)
+[Documentação Expo Local Notifications  - link externo](https://docs.expo.io/versions/latest/sdk/notifications/)
+
+# 📝 Licença
+
+Esse projeto possui licença do tipo  MIT License. Acesse o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 # Referências:
 ## assets
-- [Imagem do perfil - Flaticon (Link externo)](https://www.flaticon.com/br/)
+- [Imagem do perfil - Flaticon - Link externo](https://www.flaticon.com/br/)
 
 ## Projeto Oficial 
-- [github](https://github.com/birobirobiro/nlw-05-plantmanager)
+- [github  - link externo](https://github.com/birobirobiro/nlw-05-plantmanager)
 
 ## Mais informações sobre Expo:
-- [GitHub - Expo/vector-icons](https://github.com/expo/vector-icons)
-- [Documentação Expo](https://docs.expo.io/)
-- [Repositório de consulta](https://icons.expo.fyi/)
-- [GitHub - vector icons](https://github.com/oblador/react-native-vector-icons)
-- [Lista de icons](https://oblador.github.io/react-native-vector-icons/)
+- [GitHub - Expo/vector-icons - link externo](https://github.com/expo/vector-icons)
+- [Documentação Expo - link externo](https://docs.expo.io/)
+- [Repositório de consulta - link externo](https://icons.expo.fyi/)
+- [GitHub - vector icons - link externo](https://github.com/oblador/react-native-vector-icons)
+- [Lista de icons - link externo](https://oblador.github.io/react-native-vector-icons/)
 
 ## Mais Sobre React Navigation:
-- [Documentação React Navigation](https://reactnavigation.org/)
-- [Instação React Navigation](https://reactnavigation.org/docs/getting-started)
-- [React Navigation Stack](https://reactnavigation.org/docs/hello-react-navigation)
+- [Documentação React Navigation - link externo](https://reactnavigation.org/)
+- [Instação React Navigation - link externo](https://reactnavigation.org/docs/getting-started)
+- [React Navigation Stack - link externo](https://reactnavigation.org/docs/hello-react-navigation)
