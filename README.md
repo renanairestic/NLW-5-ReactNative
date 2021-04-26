@@ -11,7 +11,7 @@ O evento aconteceu online no formato de aulas assíncronas disponibilizadas uma 
 - Dia 04 - 22/04/2021
 - Dia 05 - 23/04/2021
 
-# [Meu Projeto - Acesse aqui](https://github.com/renanairestic/NLW-5-ReactNative/tree/main/plantmanager)
+🔗️[Meu Projeto - Acesse aqui](https://github.com/renanairestic/NLW-5-ReactNative/tree/main/plantmanager)
 
 # Links Externos:
-- [Rocketseat](https://rocketseat.com.br/)
+- [Rocketseat - LINK EXTERNO](https://rocketseat.com.br/)
