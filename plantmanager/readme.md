@@ -29,7 +29,7 @@ Necessário ter uma conta no [Figma](http://figma.com/) para ter acesso.
 
 - [Passo a passo para rodar o app](#Passo-a-Passo)
 - [Adicional ao Projeto](#Adicional-ao-Projeto)
-- [Lista de Dependências Instaladas](#LISTA-DE-DEPENDÊNCIAS)
+- [Lista de Dependências Instaladas](#LISTA-DE-DEPENDENCIAS)
 - [Referências](#Referências)
 
 
