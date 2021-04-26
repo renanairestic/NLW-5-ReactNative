@@ -14,13 +14,13 @@
 - TypeScript
 
 
-# DIÁRIO DE BORDO - SUMÁRIO
+# SUMÁRIO
 
  ## [Dia 01](#Dia-01) | [Dia 02](#Dia-02) | [Dia 03](#Dia-03) | [Dia 04](#Dia-04) | [Dia 05](#Dia-05)
 
 - [Passo a passo para rodar o app](#Rodar-o-App)
+- [Adicional ao Projeto](#Adicional-ao-Projeto)
 - [Lista de Dependências Instaladas](#LISTA-DE-DEPENDENCIAS)
-- [Adicional ao Projeto](#Adicional-ao-Projeto:)
 - [Referências](#Referências)
 
 
@@ -60,95 +60,18 @@
 
   5 - Se tudo deu certo o App deve está abrindo e funcionando.
 
-# LISTA DE DEPENDÊNCIAS:
-
-## Expo Vector:
-
-Para trabalhar com icons.
-
-> expo install @expo/vector-icons
-
-[Referências](##Mais-informações-sobre-Expo:)
-
-## Font - Jost (Google Fonts via Expo)
-
-> expo install expo-font @expo-google-fonts/jost
-
-[Referência/docs](https://docs.expo.io/guides/using-custom-fonts/)
-  
-### Expo App Loading
-  > expo install expo-app-loading 
-
-  [Documentação](https://docs.expo.io/versions/latest/sdk/app-loading/)
-
-## React Navigation
-> yarn add @react-navigation/native
-
-> expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
-
-> yarn add @react-navigation/stack
-
-[Referências](##Mais-Sobre-React-Navigation)
-
-## react-native-iphone-x-helper
-
-> npm i react-native-iphone-x-helper
-ou
-> yarn add react-native-iphone-x-helper
-
-[Mais em Doc](https://github.com/ptelad/react-native-iphone-x-helper)
-
-## Axios
-Biblioteca para lhe dar com requisições.
-
-> yarn add axios
-
-[Doc](https://github.com/axios/axios)
-
-## AsyncStorage
-  Persitência de dados
-
-  > expo install @react-native-async-storage/async-storage
-
-  [Doc Expo  AsyncStorage](https://docs.expo.io/versions/latest/sdk/async-storage/)
-
-## Typecode - Json-server
-Biblioteca para simular API fake. Rodar em super usuário.
-> #npm install -g json-server
-
-## Expo SVG
-Para trabalhar e exibir imagens no formato svg (vetorizadas)
-> expo install react-native-svg
-
-[doc](https://docs.expo.io/versions/latest/sdk/svg/)
-
-## Expo-DataTimePicker
-[Doc Expo DateTimePicker](https://docs.expo.io/versions/latest/sdk/date-time-picker/)
-
-> expo install @react-native-community/datetimepicker
-
-## date-fns
-[Documentação date-fns](https://date-fns.org/docs/Getting-Started)
-
-> yarn add date-fns
-
-
-## react navigation tabs
-[Documentação tab-navigation](https://reactnavigation.org/docs/tab-based-navigation)
-
-> yarn add @react-navigation/bottom-tabs
-
-## Expo local Notification
-[Documentação Expo Local Notifications](https://docs.expo.io/versions/latest/sdk/notifications/)
 
 
 
-Aqui estão minha anotações contando o que achei de relevante durante as explicações das aulas no NLW.
+> Aqui estão minha anotações:
 
 # Dia 01
   Foram realizados as pré configurações e estruturação do projeto.
 
   Explicado sobre hooks - useState 
+  
+  [Instalação Expo Vector](##Expo-Vector)
+  
 
 # Dia 02
 
@@ -161,13 +84,19 @@ Neste dia foi realizado:
 
 ```Dica: Para garantir que todas as fonts sejam carregadas é recomendado usar o metodo de Expo Load (relatório de pendendências).
 ```
- Hack para SafeAreaView funcionar em android:
+[Instalação Font Google](##Font-Jost-(Google-Fonts-via-Expo)
+
+ Hack para SafeAreaView funcionar em Android:
  
-    Adiciona no CSS:
+ ``Essa dica foi retidada da comunidade no Discord``
+ 
+   Adiciona no CSS:
+    
     ``` paddingTop: Platform.OS === 'android' ? 25 : 0 ```
     
-    Import:
-  ```
+   Import:
+
+```
     import {Platform} from 'react-native';
 
   ```
@@ -188,6 +117,10 @@ Usado no caso de não passar parâmentro de definição de tipo.
 
 ### Crianção arquivo Confirmation
 
+Nessa etapa foi instalado a dependência Expo App Loading
+
+-[Instalação App Loading](##Expo-App-Loading)
+
 ### Usar Navigation
 
 Dica:
@@ -196,6 +129,7 @@ Dica:
     onPress={Keyboard.dimiss}> em volta da tela
   ```
 
+- [Instalação Navigation](##React-Navigation)
 
 
 # Dia 03
@@ -203,7 +137,7 @@ Dica:
 Criação da interface de escolha uma plantas.
 
 ## Header:
-- [Instação da lib react-native-iphone-x-helper](##-react-native-iphone-x-helper)
+- [Instação da lib react-native-iphone-x-helper](##react-native-iphone-x-helper)
 
 Usar no css na propriedade marginTop para adicionar uma margem e ignorar o detalhe da tela do iphone-x.
 
@@ -223,16 +157,21 @@ Para formatar uma imagem ou bordar circulares a dica é colocar pelo menos 50% o
   }
 ``` 
 ### Uso do react-native-gesture-handler 
-recButton.
+  recButton.
 
 ### Dica, acumular estilos.
 Transforma o style em uma lista
+
 ex.
 ```JS
   <Text style={[styles.stilo1,styles.estilo2]}>
 ```
-### JSON
-### Load
+### Dependências
+
+- [Axios](##Axios)
+
+#### API
+- [Typecode - Json-server](##Typecode-Json-server)
 
 ## Recap:
 {x} Construção da tela de listar as plantas
@@ -252,13 +191,7 @@ ex.
 [Expo Lottie](https://docs.expo.io/versions/latest/sdk/lottie/)
 
 Utilizando organização de lista via Expo SVG
-
-
-
-
-
-
-
+- [Instalação Expo SVG](##Expo-SVG)
 
 # Dia 04
 
@@ -270,6 +203,7 @@ Utilizando organização de lista via Expo SVG
   if(!name)
       return Alert.alert('Me diz como chamar você 😢️');
   ```
+
 ## AsyncStorage
   [Instalação](##AsyncStorage)
 
@@ -319,7 +253,6 @@ Cunstomização de hora tanto para Android como para ios.
   Foi usado nos arquivos [PlantSave]('./src/pages/PlantSave.tsx) e [PlantSelect]('./src/pages/PlantSelect.tsx')
 
   
-
 ### Tab-bar
 - [Instalação](##react-navigation-tabs)
 
@@ -368,10 +301,118 @@ Foi realizado a explicação conceitural sobre a lib.
      </View>
 ```
 
+# LISTA DE DEPENDÊNCIAS
+
+## Expo Vector
+
+Para trabalhar com icons.
+Comando do terminal:
+
+> expo install @expo/vector-icons
+
+[Referências](##Mais-informações-sobre-Expo)
+
+## Font - Jost (Google Fonts via Expo)
+Comando do terminal:
+
+> expo install expo-font @expo-google-fonts/jost
+
+[Referência/docs](https://docs.expo.io/guides/using-custom-fonts/)
+  
+### Expo App Loading
+Comando do terminal:
+
+  > expo install expo-app-loading 
+
+  [Documentação](https://docs.expo.io/versions/latest/sdk/app-loading/)
+
+## React Navigation
+Comandos do terminal:
+
+> yarn add @react-navigation/native
+
+> expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+> yarn add @react-navigation/stack
+
+[Referências](##Mais-Sobre-React-Navigation)
+
+## react-native-iphone-x-helper
+Comando do terminal:
+
+> npm i react-native-iphone-x-helper
+ou
+> yarn add react-native-iphone-x-helper
+
+[Mais em Doc](https://github.com/ptelad/react-native-iphone-x-helper)
+
+## Axios
+Biblioteca para trabalhar com requisições.
+Comando do terminal:
+
+> yarn add axios
+
+[Doc](https://github.com/axios/axios)
+
+## AsyncStorage
+  Persitência de dados
+  Comando do terminal:
+
+  > expo install @react-native-async-storage/async-storage
+
+  [Doc Expo  AsyncStorage](https://docs.expo.io/versions/latest/sdk/async-storage/)
+
+## Typecode - Json-server
+Biblioteca para simular API fake. Rodar em super usuário.
+
+Comando do terminal:
+> #npm install -g json-server
+
+Note que esse comendo precisa ser rodado com acesso ao super usuário, no linux rode o comando su antes do comando e digite a sua senha. 
+
+## Expo SVG
+Para trabalhar e exibir imagens no formato svg (vetorizadas)
+
+Comando do terminal:
+> expo install react-native-svg
+
+[doc](https://docs.expo.io/versions/latest/sdk/svg/)
+
+## Expo-DataTimePicker
+
+Comando do terminal:
+
+> expo install @react-native-community/datetimepicker
+
+[Doc Expo DateTimePicker](https://docs.expo.io/versions/latest/sdk/date-time-picker/)
+
+## date-fns
+
+Comando do terminal:
+
+> yarn add date-fns
+
+[Documentação date-fns](https://date-fns.org/docs/Getting-Started)
+
+## react navigation tabs
+
+Comando do terminal:
+
+> yarn add @react-navigation/bottom-tabs
+
+[Documentação tab-navigation](https://reactnavigation.org/docs/tab-based-navigation)
+
+## Expo local Notification
+
+Comando do terminal: 
+
+> expo install expo-notifications
+
+[Documentação Expo Local Notifications](https://docs.expo.io/versions/latest/sdk/notifications/)
 
 # Referências:
 ## assets
-- [Imagem do perfil](https://www.flaticon.com/br/)
+- [Imagem do perfil - Flaticon (Link externo)](https://www.flaticon.com/br/)
 
 ## Projeto Oficial 
 - [github](https://github.com/birobirobiro/nlw-05-plantmanager)
