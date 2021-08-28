@@ -4,6 +4,9 @@ Prática realizada durante o evento NLW - Next Level Week, trilha React Native. 
 
 O evento aconteceu online no formato de aulas assíncronas disponibilizadas uma parte por dia.
 
+### O projeto consiste em um App para gerenciar regas de plantas.
+Foi utilizado
+
 ## Etapas:
 - Dia 01 - 19/04/2021
 - Dia 02 - 20/04/2021
